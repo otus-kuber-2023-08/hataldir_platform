@@ -12,17 +12,14 @@ spec:
    volumeMounts:
      - name: app
        mountPath: /app
-#       readOnly: true
  initContainers: 
  - name: init-web
    image: busybox
 #:1.31.0
    command: ['sh', '-c', 'wget -O- https://tinyurl.com/otus-k8s-intro | sh']
-#   command: ['sh', '-c', 'wget https://tinyurl.com/otus-k8s-intro -O /app/test']
    volumeMounts:
      - name: app
        mountPath: /app
-#       readOnly: false
  volumes:
  - name: app
    emptyDir: {}
