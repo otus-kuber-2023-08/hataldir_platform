@@ -32,7 +32,7 @@ kube-proxy - создается с помощью DaemonSet kube-proxy.
 
 Манифест запущен, порт проброшен с помощью kubectl port-forward, работа веб-сервера проверена.
 
-![скриншот](kube1.png)
+![скриншот](https://github.com/otus-kuber-2023-08/hataldir_platform/blob/kubernetes-intro/kubernetes-intro/kube1.png)
 
 ## Cоздание сервиса frontend из приложения Hipster-shop
 
