@@ -17,7 +17,6 @@ spec:
      containers:
      - name: server
        image: hataldir/hs-frontend:0.02
-       resources: {}
        env:
         - name: PORT
           value: "8080"
