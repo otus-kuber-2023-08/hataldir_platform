@@ -17,18 +17,16 @@ spec:
      containers:
      - name: server
        image: hataldir/hs-frontend:0.02
-       ports:
-         - containerPort: 8080
+#       ports:
+#         - containerPort: 8080
        readinessProbe:
          initialDelaySeconds: 10
          httpGet:
-            path: "/_health"
+            path: "/_healthz"
             port: 8080
             httpHeaders:
             - name: "Cookie"
               value: "shop_session-id=x-readiness-probe"
-
-       resources: {}
        env:
         - name: PORT
           value: "8080"

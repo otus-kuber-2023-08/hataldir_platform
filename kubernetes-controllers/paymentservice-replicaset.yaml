@@ -17,7 +17,6 @@ spec:
      containers:
      - name: server
        image: hataldir/hs-paymentservice:0.01
-       resources: {}
        env:
         - name: PORT
           value: "50051"
