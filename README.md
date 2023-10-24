@@ -1,6 +1,16 @@
 # hataldir_platform
 hataldir Platform repository
 
+# Домашнее задание 4
+
+Создание аккаунтов и назначение прав.
+
+1. Созданы аккаунты bob и dave, bob назначен администратором кластера.
+
+2. Создан namespace prometheus, в нем создан аккаунт carol, всем аккаунтам в prometheus назначены права get, list, watch на весь кластер.
+
+3. Создан namespace dev, в нем созданы аккаунты jane и ken, jane назначена администратором dev, аккаунту ken выданы права view в dev.
+
 # Домашнее задание 3
 
 Задание выполняется снова на minukube.
