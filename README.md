@@ -1,5 +1,30 @@
-# hataldir_platform
-hataldir Platform repository
+# Домашнее задание 6
+
+Helm
+
+Создан кластер в Yandex cloud. Установлена утилита yc; yc и kubectl настроены на использование созданного кластера.
+
+Установлен Helm. Добавлен репозиторий https://charts.helm.sh/stable, указанный в методичке был недоступен.
+
+Установлен ingress-nginx из https://kubernetes.github.io/ingress-nginx, указанный в методичке был недоступен.
+
+Установлен cert-manager версии 1.13.1 вместо указанной в методичке 0.16.1 с помощью helm, а также crd для него.
+Создан issuer.
+
+Установлен chartmuseum из https://chartmuseum.github.io/charts, указанный в методичке был недоступен.
+
+Установлен Harbor из https://github.com/goharbor/harbor-helm.
+
+Создан helm-чарт hipster-shop с помощью приложенного в ДЗ  манифеста all-hipster-shop.yaml. Из чарта развернуто приложение.
+
+Из общего темплейта выделен отдельный темплейт frontend (deployment, service, написанный новый ingress)
+
+В темплейте frontend часть параметров превращена в переменные и вынесена в values.yaml.
+
+Установлен плагин helm-secrets, создан PGP ключ, создан и затем зашифрован манифест secrets.yaml
+
+Установлен kubecfg, сервисы shippingservice и paymentservice вынесены в services.jsonnet
+
 
 # Домашнее задание 5
 
