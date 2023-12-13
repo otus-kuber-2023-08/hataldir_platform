@@ -1,3 +1,37 @@
+# Домашнее задание 8
+
+Monitoring
+
+Созданы deployment и service для nginx, в конфиге которого прописан location /basic_status.
+
+Созданы deployment и service для nginx-exporter.
+
+Скачаны CRD для prometheus-operator, создан ServiceMonitor.
+
+
+# Домашнее задание 7
+
+CRD
+
+Создано Custom Resource Definition. Пример из методички устарел, версия api теперь v1, в манифест также необходимо добавить раздел schema.
+
+Применены все манифесты, в базу добавлены данные.
+
+kubectl exec -it $MYSQLPOD -- mysql -potuspassword -e "select * from test;" otus-database
+mysql: [Warning] Using a password on the command line interface can be insecure.
++----+-------------+
+| id | name        |
++----+-------------+
+|  1 | some data   |
+|  2 | some data-2 |
++----+-------------+
+
+Далее необходимо удалить базу, но команда kubectl delete mysqls.otus.homework mysql-instance запускает джоб бекапа, который зависает. 
+Соответственно восстановления тоже не происходит.
+Скорее всего причина в устаревшем образе zhenkins/mysql-operator:v0.1
+
+
+
 # Домашнее задание 6
 
 Helm
